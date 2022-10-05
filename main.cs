@@ -8,6 +8,11 @@ class Program
         int playerHp = 100;
         int enemyHp = 200;
         int enemyDmg = 45;
+        int longsword = 50;
+        int dagger = 45;
+        int rapier = 35;
+        int cutlass = 45;
+        int shortsword = 35;
 
         //sup bro, whats your name
         Console.WriteLine("Welcome to Challenger!");
@@ -15,8 +20,9 @@ class Program
         Console.WriteLine("By the looks of it, you are an adventure seeker?");
         Console.ForegroundColor = ConsoleColor.Black;
         Console.WriteLine("Please type yes or no: ");
-        Console.ForegroundColor = ConsoleColor.White;
+         Console.ForegroundColor = ConsoleColor.Magenta;
         string playerStart = Console.ReadLine().ToLower();
+        Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("");
         if (playerStart == stringYes)
         {
@@ -39,7 +45,9 @@ class Program
         }
 
         Console.WriteLine("But first, I need your name: ");
+        Console.ForegroundColor = ConsoleColor.Magenta;
         string playerName = Console.ReadLine().ToUpper();
+        Console.ForegroundColor = ConsoleColor.White;
         Console.Write("Hello, ");
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.Write(playerName);
@@ -52,7 +60,7 @@ class Program
         Console.WriteLine("Hold on a moment, you don't even know how to play yet! Silly me, ");
         //understanding colour
         Console.Write("So, npc dialog will appear in ");
-        Console.ForegroundColor = ConsoleColor.DarkGreen;;
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
         Console.Write("dark green.");
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("");
@@ -282,9 +290,8 @@ class Program
                 Console.WriteLine("Please type Yes or No: ");
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 //to save or not to save that is the question
-                string toSave = Console.ReadLine();
-                if (toSave == stringYes)
-                {
+                string toSave = Console.ReadLine().ToLower();
+                if (toSave == stringYes){
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Fight Initiated                         Enemy Hp: " + enemyHp + "     Your Hp: " + playerHp);
                     Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -299,15 +306,15 @@ class Program
                     Console.WriteLine("oooh! A " + playerWeapon + " fancy~");
                     if (playerWeapon == "longsword")
                     {
-                        enemyHp = enemyHp - 50;
+                        enemyHp = enemyHp - longsword;
                     }
                     if (playerWeapon == "dagger")
                     {
-                        enemyHp = enemyHp - 45;
+                        enemyHp = enemyHp - dagger;
                     }
                     if (playerWeapon == "rapier")
                     {
-                        enemyHp = enemyHp - 40;
+                        enemyHp = enemyHp - rapier;
                     }
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Enemy Hp has fallen to " + enemyHp);
@@ -319,8 +326,7 @@ class Program
                 }
 
 
-                if (toSave == stringNo)
-                {
+                if (toSave == stringNo){
                     System.Environment.Exit(1);
                 }
                 if (knightdecision1 == stringNo)
@@ -328,7 +334,7 @@ class Program
                     Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.WriteLine("The King's eyebrows furrow furiously and he fixes his mouth in a sneer,");
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Then why are you here! You are a useless Knight! LEAVE!! I cant stand the sight of you.");
+                    Console.WriteLine("Then why are you here! You are a USELESS  Knight! LEAVE!! I cant stand the sight of you.");
                     System.Environment.Exit(1);
                 }
                 //ends knight path// 
@@ -344,10 +350,11 @@ class Program
             Console.WriteLine("You grogily open your eyes to the shine of morning sun coming through your porthole window. A voice beside you has awoken you from your slumber.");
             Console.WriteLine("You roll over on your hard mattress and meet the eyes of a familiar face.");
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("'Good Morning, Nate.'");
+            Console.Write("'Good Morning, Nate.' ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("You say with a smile. Nate, your first mate and partner sits on the edge of your bed already dressed and ready for the day.");
+            Console.Write("You say with a smile. Nate, your first mate and partner sits on the edge of your bed already dressed and ready for the day.");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("");
             Console.Write("Good Morning, Captain ");
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Write(playerName);
@@ -368,27 +375,111 @@ class Program
             string piratedecision1 = Console.ReadLine();
             if (piratedecision1 == "Yes")
             {
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Oh wonderful! Shall we go and inform the crew?");
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("Nate looks ecstatic; its adorable.");
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("'You go on ahead, I'm still waking up,'");
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("Nate nods enthusiastically and practically bounces out of your cabin.");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.WriteLine("Oh wonderful! Shall we go and inform the crew?");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.WriteLine("Nate looks ecstatic; its adorable.");
+              Console.ForegroundColor = ConsoleColor.Magenta;
+              Console.WriteLine("'You go on ahead, I'm still waking up,'");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.WriteLine("Nate nods enthusiastically and practically bounces out of your shared cabin.");
+              Console.WriteLine("You slowly begin to wake up. You dress yourself and make your way on to the deck where Nate has assembled the crew.");
+              Console.ForegroundColor = ConsoleColor.Magenta;
+              Console.Write("Morning all, ");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.Write("you adress the crew, still half asleep.");
+              Console.ForegroundColor = ConsoleColor.Magenta;
+              Console.WriteLine("");
+              Console.WriteLine("I know we only recently shook the navy off our trails but Nate and I have made a decision; ");
+              Console.WriteLine("We're going to find the Dragon's treasure of Volcano Island!");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.WriteLine("The whole crew look around eachother in shock, this wasnt usually your style: you'd usually try to lay low and avoid the attention of the mainland Navy. But today you're feeling adventurous.");
+              Console.WriteLine ("But soon the whole deck errupts in excited cheers!");
+              Console.WriteLine ("");
+              Console.WriteLine ("You decide to set off immediatly, you were already headed towards an island not too far from you destination, Escapar, and planned to stock up on essentials before starting your perilous journey!");
+              Console.WriteLine ("");
+              //weapon choosing
+              Console.WriteLine("As the crew dock your ship at Escapar's port, you decide its a good time for a new weapon; you've been lugging this old cutlass around for the past 6 years. Its not the oldest sword you've ever had but you've been out on the open sea for so long that the sword is practically cacked in salt. You need an upgrade.");
+              Console.WriteLine("You notice a Bladesmith's advertising new blades and repairs near to the port as if it had read your mind!");
+              Console.WriteLine("");
+            //merchant shop buying weapons//
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.WriteLine("Welcome to my humble establishment, in line for a new weapon? I'm your man!");
+              Console.ForegroundColor = ConsoleColor.DarkBlue;
+              Console.WriteLine("The shop owner is friendly and directs you to his finest weapons.");
+              Console.ForegroundColor = ConsoleColor.Cyan;
+              Console.WriteLine("Now this one's new in. A beautiful cutlass, its hilt bejeweled with crystals and stones of old.");
+              Console.WriteLine("This dagger once belonged to a fabled pick-pocket, it's swift and light for secrecy.");
+              Console.WriteLine("This rapier is possibly my oldest asset, it has the whisper of many horrific deaths on its thin blade.");
+              Console.WriteLine("So, what will it be?");
+              Console.ForegroundColor = ConsoleColor.Black;
+              Console.WriteLine("Please type longsword, dagger or rapier: ");
+              Console.ForegroundColor = ConsoleColor.Magenta;
+              string playerWeapon = Console.ReadLine().ToLower();
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.WriteLine("An excelent choice mighty pirate!");
+
+              
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.WriteLine("");
+              Console.WriteLine("After taking the day to organise supplies with the locals and cash in favours you decide that you need a break.");
+              Console.WriteLine("Nate suggests a nearby tavern which to you tired feet sounds like a godsend. Nate orders from the bar for you both and you wait for your orders in a booth at the back of the tavern.");
+              Console.WriteLine("Nate cosey's up next to you looking sheepish, ");
+              Console.ForegroundColor = ConsoleColor.Magenta;
+              Console.Write ("What's wrong?");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.Write("You ask with concern but Nate only smiles,");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.WriteLine ("");
+              Console.WriteLine("It's just nice to talk without the crew's ears at the door,");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.WriteLine("The moment is ruined when the tavern door slams with a bang and two rough men enter looking very pleased with themselves as they drag a weary-looking figure behind them.");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.WriteLine("");
+              Console.Write("Captain!");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.Write("You notice the men are apart of your crew and you feel a sudden wave of intense anger consume you as your moment with Nate is distrupted.");
+              Console.WriteLine("");
+              Console.WriteLine("");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.WriteLine("We caught this rapscallion trying to steal our food as we were restocking, cheeky bugger! What shall we do with him? Take him with us and then throw him into the volcano?!");
+              Console.Write("Or make 'im walk the plank!?");
+              Console.ForegroundColor = ConsoleColor.DarkBlue;
+              Console.Write(" The other chimes in excidedly.");
+              Console.WriteLine("However their prisoner seems to have other ideas; ");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.Write("NO! Let go of me you dirty pirates!!");
+              Console.ForegroundColor = ConsoleColor.DarkBlue;
+              Console.Write("The figure wrenches his arm from one of the crew's grasp but the other scoops him up into his burly arms.");
+              Console.WriteLine("The boy writhes and wriggles in the pirates arms but to no avail.");
+              Console.WriteLine("You keep you face calm but the flames of your anger lick inside you chest;");
+              Console.WriteLine("");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.WriteLine("Drop him. Now!");
+              Console.ForegroundColor = ConsoleColor.DarkBlue;
+              Console.WriteLine("You demand, your voice full of authority,");
+              Console.ForegroundColor = ConsoleColor.Magenta;
+              Console.WriteLine("What made you imbeciles think I would be interested in some street trash?");
+              Console.ForegroundColor = ConsoleColor.DarkRed;
+              Console.WriteLine("Though its not in your nature to be cruel, you have no choice; you're angry at your crew for ruining your time with Nate, you're angry at them for even IMAGINING you'd ever want to take someone prisoner and you're annoyed someone thought they could steal from you. The boy's face contorts into one of pure disgust, ");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.Write("STREET TRASH?!");
+              Console.ForegroundColor = ConsoleColor.DarkGreen;
+              Console.Write("The boy shreeks incredulously.");
+              Console.ForegroundColor = ConsoleColor.DarkBlue;
+              Console.WriteLine("Will you swoop in and save the prince or leave him to his fate?");
+              Console.ForegroundColor = ConsoleColor.Black;
+              Console.WriteLine("Please type Yes or No: ");
+              Console.ForegroundColor = ConsoleColor.Magenta;
             }
-            if (piratedecision1 == "No")
-            {
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("Oh, okay...");
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("Nate looks rather solumn as he leaves your cabin, you feel bad but it's still too early for you. You go back to sleep.");
-                System.Environment.Exit(1);
-            }
-        }
-        if (playerRole == "PIRATE")
-        {
 
+          
+          if (piratedecision1 == "No"){
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Oh, okay...");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("Nate looks rather solumn as he leaves your cabin, you feel bad but it's still too early for you. You go back to sleep.");
+            System.Environment.Exit(1);}
         }
 
 
@@ -410,7 +501,8 @@ class Program
 
 
 
-    }
+
+  }
 }
 
 
